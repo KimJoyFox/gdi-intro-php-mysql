@@ -172,12 +172,12 @@ if ($bananas &gt; 0) {
           </section>
           <section>
             <h3>Comparison Operators</h3>
-            <table class="smalltext">
+            <table class="smalltext" style="width:110%; font-size:70%;">
               <thead>
                 <tr>
-                  <th width="150px">Example</th>
+                  <th width="180px">Example</th>
                   <th width="250px">Name</th>
-                  <th>Result</th>
+                  <th >Result</th>
                 </tr>
               </thead>
               <tbody>
@@ -233,6 +233,8 @@ if ($bananas &gt; 0) {
           <section>
             <h3>Let's Develop It</h3>
             <p>Make a variable called "temperature." Write some code that tells you to put on a coat if it is below 50 degrees.</p>
+            <br/>
+            <p>CHALLENGE: Put the above code within a function and return and echo "Put your coat on!" if it is below 50 degrees.</p>
           </section>
         </section>
 
@@ -256,7 +258,7 @@ if ($age &gt;= 16) {
 </code></pre>
           </section>
           <section>
-            <h3>The if/else if/else statement</h3>
+            <h3>The if/else else/if statement</h3>
             <p>If you have multiple conditions, you can use else if.</p>
 <pre><code class="php">$age = 20;
 if ($age >= 35) {
@@ -280,6 +282,8 @@ if ($age >= 35) {
               <li>If it is less than 0 degrees, stay inside.</li>
               <li>Otherwise, wear whatever you want.</li>
             </ol>
+            <br/><br/>
+            <p>CHALLENGE: Put the above code within a function and return the result.</p>
           </section>
           <section>
             <h3>Logical Operators</h3>
@@ -374,6 +378,7 @@ for ($i = 1; $i &lt;= 10; $i++) {
   echo $i;
 }
 </code></pre>
+<p style="margin-top:10px; font-size:70%;">*Client Side versus Server Side</p>
           </section>
           <section>
             <h3>Loops and logic</h3>
@@ -410,12 +415,17 @@ for ($i = 1; $i &lt;= 50; $i++) {
           <section>
             <h3>Arrays</h3>
             <p>Arrays are lists of values associated with a key. The key needs to be an integer or a string, the value can be any type.</p>
+            <p>Regular Array</p>
+            <pre><code class="php">$kittenColors = array('tabby', 'black', 'white');
+</code></pre>
+<p>Associative Array</p>
 <pre><code class="php">$kittenColors = array(
   'Fluffy' => 'tabby',
   'Midnight' => 'black',
   'Admiral Snuggles' => 'white'
 );
 </code></pre>
+
           </section>
           <section>
             <h3>Using arrays</h3>
@@ -449,7 +459,8 @@ unset($kittenColors['Midnight']);
             <p>If you don't specify a key, PHP will just automatically assign integers as keys, starting with zero.</p>
 <pre><code class="php">$fruits = array("apple", "orange", "banana", "kiwi");
 var_dump($fruits); //shows whole array
-echo $fruits[1]; //will print orange
+print_r($fruits); // shows whole array
+echo $fruits[1]; 
 
 //You can add with no key as well
 $fruits[] = 'mango';
@@ -458,7 +469,8 @@ var_dump($fruits);
           </section>
           <section>
             <h3>Let's Develop It</h3>
-            <p>Create an array of your friends and their favorite foods. Echo a few values onto your screen.</p>
+            <p>Create an array of items you want from Target.</p><br/>
+            <p>Create an associative array of your friends and their favorite foods. Echo a few values onto your screen.</p>
           </section>
         </section>
 
@@ -555,3 +567,4 @@ foreach ($kittenColors as $name =&gt; $color) {
 
   </body>
 </html>
+
